@@ -1,4 +1,5 @@
     var shoppingList = [];
+    var priceList = [];
 
     var showcart= document.getElementById("showcart");
     var apple = document.getElementById("apple");
@@ -15,8 +16,9 @@
     banana.onclick = shoppingList.push("banana");
     water.onclick = shoppingList.push("watermelon");
 */
-    function addItem(item) {
+    function addItem(item, price) {
         shoppingList.push(item);
+        priceList.push(price);
     }
 
 
@@ -25,7 +27,7 @@
         var i;
 
         for (i = 0; i < shoppingList.length; i++) {
-            console.log(shoppingList[i]);
+            console.log(shoppingList[i] + " $" + priceList[i]);
         }
 
         if (shoppingList.length === 0) {
@@ -39,5 +41,6 @@
     function clearItems() {
 
         shoppingList = [];
+        priceList = [];
 
     }
